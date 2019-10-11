@@ -32,31 +32,33 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.navigation);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new GeneratorFragment()).commit();
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.navigation_create:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout , new GeneratorFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new GeneratorFragment()).commit();
                         return true;
                     case R.id.navigation_discover:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout , new DiscoverFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new DiscoverFragment()).commit();
                         return true;
                     case R.id.navigation_trips:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout , new TripsFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TripsFragment()).commit();
                         return true;
                     case R.id.navigation_guid:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout , new GuideFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new GuideFragment()).commit();
                         return true;
                     case R.id.navigation_profile:
-                        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout , new ProfileFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ProfileFragment()).commit();
                         return true;
+                    default:
+                        return false;
 
                 }
-                return false;
             }
         });
-
 
 
 //        Date date = new Date();

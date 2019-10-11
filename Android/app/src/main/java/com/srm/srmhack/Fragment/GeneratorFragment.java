@@ -16,7 +16,7 @@ public class GeneratorFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = getLayoutInflater().inflate(R.layout.fragment_generator , container, true);
+        View view = getLayoutInflater().inflate(R.layout.fragment_generator , container, false);
         return view;
     }
 }

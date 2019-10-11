@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/nameTextDiscover"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="discover"
-        android:layout_centerInParent="true"/>
+        android:text="Hi Karan"
+        android:fontFamily="@font/open_sans"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#707070"/>
 
+    <TextView
+        android:fontFamily="@font/open_sans_light"
+        android:layout_below="@id/nameTextDiscover"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Where would you like to go?"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </RelativeLayout>
