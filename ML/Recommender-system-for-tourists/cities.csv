@@ -1,0 +1,51 @@
+cities,latitude,longitude,rating
+Agra(Uttar Pradesh),27.183329999999998,78.01666999999999,8.2
+Ahmedabad(Gujarat),23.02579,72.58726999999999,7.0
+Allahabad(Uttar Pradesh),25.44894,81.83329,8.0
+Amritsar(Punjab),31.636609999999997,74.87476,6.7
+Aurangabad(Maharashtra),19.877570000000002,75.34226,8.7
+Bangalore(Karnataka),12.97194,77.59369000000001,9.3
+Bhopal(Madhya Pradesh),23.25469,77.40289,8.5
+Chandigarh(Chandigarh),30.736290000000004,76.7884,7.0
+Chennai(Tamil Nadu),13.08784,80.27847,8.9
+Coimbatore(Tamil Nadu),11.00555,76.96611999999999,8.0
+Delhi(NCT),28.653809999999996,77.22896999999999,9.0
+Dombivli(Maharashtra),19.21667,73.08333,5.0
+Faridabad(Haryana),28.41252,77.31976999999999,6.0
+Ghaziabad(Uttar Pradesh),28.662490000000002,77.43777,7.0
+Gorakhpur(UP),29.447020000000002,75.67181,7.8
+Guwahati(Assam),26.1844,91.7458,9.0
+Gwalior(Madhya Pradesh),26.22983,78.17336999999999,7.8
+Haora(West Bengal),22.57688,88.31857,8.9
+Hyderabad(Telangana),17.38405,78.45636,9.0
+Indore(Madhya Pradesh),23.166970000000003,79.95006,8.0
+Jabalpur(Madhya Pradesh),24.6789,75.87899999999999,6.7
+Jaipur(Rajasthan),26.919620000000002,75.78781,8.0
+Jodhpur(Rajasthan),26.26841,73.00594,8.5
+Kalyan(Maharashtra),19.2437,73.13554,7.0
+Kanpur(Uttar Pradesh),26.4478,80.34626999999999,8.0
+Kolkata(West Bengal),22.56263,88.36304,8.9
+Lucknow(Uttar Pradesh),26.83928,80.92313,8.0
+Ludhiana(Punjab),30.90015,75.85229,7.8
+Madurai(Tamil Nadu),9.91735,78.11962,8.0
+Meerut(Uttar Pradesh),28.97155,77.71934,9.0
+Mumbai(Maharashtra),19.07283,72.88261,9.1
+Mysore(Karnataka),12.29791,76.63925,7.8
+Nagpur(Maharashtra),21.14631,79.08491,8.0
+Nashik(Maharashtra),19.99727,73.79096,7.0
+Navi Mumbai(Maharashtra),19.03681,73.01581999999999,8.8
+Nowrangapur(Odisha),19.23114,82.54826,8.0
+Patna(Bihar),25.602220000000003,85.11936,9.0
+Pimpri(Maharashtra),18.62292,73.80696,5.6
+Pune(Maharashtra),18.51957,73.85535,7.8
+Rajkot(Gujarat),22.291610000000002,70.79321999999999,8.0
+Shivaji Nagar(Maharashtra),18.530170000000002,73.85263,9.0
+Solapur(Maharashtra),17.67152,75.91044000000001,5.6
+Srinagar(Kashmir),34.08842,74.80298,9.0
+Surat(Gujarat),21.19594,72.83023,7.8
+Teni(Tamil Nadu),10.015310000000001,77.482,7.0
+Thane(Maharashtra),19.197039999999998,72.96355,8.8
+Vadodara(Gujarat),22.29941,73.20812,8.0
+Varanasi(Uttar Pradesh),25.316679999999998,83.01041,8.9
+Vijayawada(Andhra Pradesh),16.51928,80.63049000000001,8.8
+Visakhapatnam(Andhra Pradesh),17.68009,17.68009,7.9
