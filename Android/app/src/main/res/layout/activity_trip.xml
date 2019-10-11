@@ -15,9 +15,10 @@
         android:background="#F9F9F9"/>
 
     <EditText
+        android:text="Chennai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Give your trip a name"
+        android:hint="Starting Point"
         android:drawableRight="@drawable/ic_edit_black_24dp"
         android:background="@drawable/back_edit_genrator"
         android:layout_marginLeft="20dp"
@@ -43,6 +44,10 @@
         android:fontFamily="@font/open_sans_light"/>
 
     <ListView
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </LinearLayout>
