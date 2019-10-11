@@ -1,0 +1,16 @@
+{
+ "name": "Gateway of India",
+ "id": "t001",
+ "type":"monument",
+ "lat": "18.9219",
+ "long": "72.8346",
+ "visit_time":"1" ,
+ "start-time":"0700" ,
+ "close-time": "1730",
+ "priority": 1,
+ "city":"Mumbai",
+ "cost":0,
+ "exception": {
+                                        
+                   }
+}

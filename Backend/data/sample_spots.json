@@ -1,0 +1,16 @@
+{
+ "name": "Taj Mahal",
+ "id": "t001",
+ "lat": "",
+ "long": "",
+ "visit_time":"" ,
+ "start-time":"" ,
+ "close-time": 0000,
+ "priority": 1,
+ "city":"Agra",
+ "cost":0,
+ "exception": {
+                       "monday":" 08:00 - 13:00",
+                       
+                   }
+}
