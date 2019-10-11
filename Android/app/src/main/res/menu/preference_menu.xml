@@ -20,7 +20,7 @@
     <item
         android:id="@+id/navigation_guid"
         android:icon="@drawable/ic_person_pin_circle_24px"
-        android:title="Tour Guides" />
+        android:title="Guides" />
 
 
 

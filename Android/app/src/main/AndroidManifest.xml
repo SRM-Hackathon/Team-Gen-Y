@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TripActivity"></activity>
+        <activity android:name=".TripActivity" android:parentActivityName=".HomeActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".PreferenceActivity" />
         <activity android:name=".LoginActivity" />

@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TripActivity">
+    tools:context=".TripActivity"
+    android:background="#F9F9F9"
+    android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTrip"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"/>
 
-</RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Give your trip a name"
+        android:drawableRight="@drawable/ic_edit_black_24dp"
+        android:background="@drawable/back_edit_genrator"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="#707070"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="2 DAYS IN MUMBAI"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11 Oct - 13 Oct"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_light"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

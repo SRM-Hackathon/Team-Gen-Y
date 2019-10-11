@@ -1,7 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back_ground">
 
-    <include layout="@layout/toolbar_main"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/ic_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAVERSE"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/nameTextDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainTool"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Hi Karan"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextDiscover"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Where would you like to go?"
+        android:textSize="20sp" />
+
+    <EditText
+        android:elevation="10dp"
+        android:hint="Enter Description"
+        android:background="@drawable/back_edit_genrator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like"
+        android:id="@+id/inputdest"
+        android:drawableRight="@drawable/ic_search_black_24dp"
+        android:layout_margin="20dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputdest"
+        android:orientation="horizontal">
+
+
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="10dp"
+            android:hint="Select Date"
+            android:layout_weight="1"
+            android:background="@drawable/back_edit_genrator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/like"
+            android:id="@+id/dateGen"
+            android:editable="false"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp" />
+
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="10dp"
+            android:hint="Select Date"
+            android:layout_weight="1"
+            android:background="@drawable/back_edit_genrator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/like"
+            android:id="@+id/bugetGen"
+            android:editable="false"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_search_black_24dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/open_sans"
+        android:textSize="15sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Generate Trip"
+        android:textColor="#21BC86"
+        android:background="@drawable/gen_button"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/generateButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/gen_back"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Popular Destinations"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutGenerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
 </RelativeLayout>

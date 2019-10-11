@@ -8,10 +8,23 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PreferenceActivity extends AppCompatActivity {
 
@@ -42,6 +55,7 @@ public class PreferenceActivity extends AppCompatActivity {
     ImageView image12;
     ImageView check12;
 
+
     boolean[] isChecked = new boolean[]{
             false,
             false,
@@ -57,12 +71,28 @@ public class PreferenceActivity extends AppCompatActivity {
             false,
     };
 
+    String[] tags = new String[]{
+            "hill station",
+            "monument",
+            "beach",
+            "museum",
+            "concert",
+            "shows",
+            "sport",
+            "public",
+            "hotel",
+            "resort",
+            "guest",
+            "hill"
+    };
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preference);
         continueButton = findViewById(R.id.preferenceButton);
-
         image1 = findViewById(R.id.image1);
         check1 = findViewById(R.id.check1);
         image2 = findViewById(R.id.image2);
@@ -332,7 +362,31 @@ public class PreferenceActivity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo: Send Fata to backend of saved priority
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.43.88:3000/user/register", new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.v("TAG",response);
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }){
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map map =new HashMap();
+                        ArrayList<String> arrayList = new ArrayList();
+                        for (int i=0 ; i<isChecked.length; i++){
+                            if (isChecked[i] == true){
+                                arrayList.add(tags[i].toString());
+                            }
+                        }
+                        map.put("tags",arrayList.toString());
+                        return map;
+                    }
+                };
+                MySending.getInstance(PreferenceActivity.this).addToRequestQueue(stringRequest);
                 startActivity(new Intent(PreferenceActivity.this, HomeActivity.class));
             }
         });
