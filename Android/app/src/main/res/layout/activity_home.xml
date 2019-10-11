@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <com.squareup.timessquare.CalendarPickerView
-        android:id="@+id/calendarView"
+<!--    <com.squareup.timessquare.CalendarPickerView-->
+<!--        android:id="@+id/calendarView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/navigation"/>-->
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_above="@id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/navigation"/>
+        android:layout_height="match_parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
@@ -18,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        app:itemIconTint="@color/colorNavIcon"
-        app:itemTextColor="@color/colorNavText"
+        app:itemIconTint="@color/item_click_color"
+        app:itemTextColor="#fff"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.srm.srmhack.R;
 
-public class DiscoverFragment extends Fragment {
+public class GuideFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = getLayoutInflater().inflate(R.layout.fragment_discover , container, true);
+        View view = getLayoutInflater().inflate(R.layout.fragment_guide , container, true);
         return view;
     }
 }

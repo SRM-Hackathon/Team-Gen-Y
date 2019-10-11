@@ -2,28 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/abc_vector_test"
-        android:title="Ite" />
+        android:id="@+id/navigation_create"
+        android:icon="@drawable/ic_format_list_bulleted_24px"
+        android:title="Create" />
+
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/abc_vector_test"
-        android:title="Com" />
+        android:id="@+id/navigation_discover"
+        android:icon="@drawable/ic_zoom_2"
+        android:title="Discover" />
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/abc_vector_test"
-        android:title="List" />
+        android:id="@+id/navigation_trips"
+        android:icon="@drawable/ic_iconmonstr_navigation_5"
+        android:title="My Trips" />
 
     <item
-        android:id="@+id/navigation_guide"
-        android:icon="@drawable/abc_vector_test"
-        android:title="guide" />
+        android:id="@+id/navigation_guid"
+        android:icon="@drawable/ic_person_pin_circle_24px"
+        android:title="Tour Guides" />
+
+
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/abc_vector_test"
-        android:title="profile" />
+        android:icon="@drawable/ic_person_24px"
+        android:title="Profile" />
+
+
 
 </menu>
