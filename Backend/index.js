@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const router = express.Router();
 const sampleRoute = require("./apis/sampleRoute");
+const userRoute = require("./apis/user");
 
 const dbUrl = process.env.dbUrl;
 const mongoClient = mongodb.MongoClient;
@@ -22,8 +23,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use("/", sampleRoute);
+app.use("/user", userRoute);
 
-const port = 5000;
+const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
