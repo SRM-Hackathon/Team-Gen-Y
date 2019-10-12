@@ -1,53 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TripActivity"
     android:background="#F9F9F9"
-    android:orientation="vertical">
+    tools:context=".TripActivity">
+
+    <LinearLayout
+        android:layout_above="@id/toolbarLinear"
+        android:id="@+id/linearTrip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9F9F9" />
+
+        <EditText
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_edit_genrator"
+            android:drawableRight="@drawable/ic_edit_black_24dp"
+            android:hint="Starting Point"
+            android:text="Chennai" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="2 DAYS IN MUMBAI"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_light"
+            android:text="11 Oct - 13 Oct"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarTrip"
+        android:elevation="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F9F9F9"/>
+        android:layout_alignParentBottom="true"
+        android:id="@+id/toolbarLinear"
+        android:background="#15A05C">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Save Trip"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:text="Chennai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Starting Point"
-        android:drawableRight="@drawable/ic_edit_black_24dp"
-        android:background="@drawable/back_edit_genrator"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:textColor="#707070"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans_bold"
-        android:text="2 DAYS IN MUMBAI"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="11 Oct - 13 Oct"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:fontFamily="@font/open_sans_light"/>
-
-    <ListView
-        android:dividerHeight="0dp"
-        android:divider="@android:color/transparent"
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-</LinearLayout>
+</RelativeLayout>

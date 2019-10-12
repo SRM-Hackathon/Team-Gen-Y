@@ -2,34 +2,259 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_ground">
+    android:background="@drawable/back_dicover">
 
-
-    <TextView
-        android:id="@+id/nameTextDiscover"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hi Karan"
-        android:fontFamily="@font/open_sans"
-        android:textSize="30sp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="25dp"
-        android:textColor="#707070"/>
-
-    <TextView
-        android:fontFamily="@font/open_sans_light"
-        android:layout_below="@id/nameTextDiscover"
-        android:layout_marginLeft="20dp"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Where would you like to go?"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/enterDestination"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainTool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/ic_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAVERSE"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/nameDiscover"
+        android:layout_below="@id/mainTool"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Fellow"
+        android:layout_marginLeft="20dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/open_sans"/>
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find out the best placs to visit!"
+        android:fontFamily="@font/open_sans_light"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/nameDiscover"/>
+
+    <TextView
+        android:id="@+id/popularPlacesText"
+        android:layout_below="@id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Popular types of places"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearMain1"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/popularPlacesText"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hill" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hill Stations"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_003___gateway_of_india" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monuments"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sun_umbrella" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beaches"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/linearMain2"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/linearMain1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_orthodox" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Religious"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fox" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wildlife"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="@drawable/square_dra_back">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hotel" />
+            </RelativeLayout>
+
+            <TextView
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resorts"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </RelativeLayout>

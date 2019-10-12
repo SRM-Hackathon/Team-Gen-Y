@@ -5,6 +5,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
     <LinearLayout
+        android:paddingTop="40dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:orientation="vertical"
@@ -60,15 +61,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
             <TextView
                 android:textStyle="italic"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ticket fare $1200"/>
+                android:text="Ticket fare ₹1200"/>
 
             <Button
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="#21BC86"
                 android:text="Book Hotel"
@@ -78,4 +81,13 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/editImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_edit_black_24dp" />
 </RelativeLayout>
