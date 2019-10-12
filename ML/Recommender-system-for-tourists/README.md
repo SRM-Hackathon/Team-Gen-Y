@@ -11,4 +11,4 @@ We have created a dummy due to lack of data.
 ### content based filtering
 ### collaboration based filtering
 ### display of tourist spots based on likeliness
-We have used knn algorithm for model training
+We can knn algorithm for model training if we get a real time numerous user data for reviews.
