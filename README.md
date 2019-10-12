@@ -1,22 +1,23 @@
 <h1>Traverse - Your Personal Travel Companion</h1>
-We have created an android application which servers as a travel companinion for the user. It helps users to plan their trips to place they want to visit. It allows users to create a customized trip iternary according to their personal preferences such as budget, location & a lot more.
+We have created an Android application which servers as a travel companinion for the user. It helps users to plan their trips to places they want to visit. It also allows the users to create a customized trip iternary according to their personal preferences such as budget, location and a lot more.
 
-Tech Stack used
-Backend:
- NodeJS 
- MongoDB
-Frontend:
- Android Studio - Java
-UI-UX Design
- Adobe XD
+<h5>Tech Stack Used</h5>
+<table>
+ <tr><td>Backend</td><td>NodeJS</td><td>MongoDB</td></tr>
+ <tr><td>Frontend</td><td colspan="2" style ="text-align:centre">Android Studio - Java</td></tr>
+ <tr><td>UI-UX Design</td><td colspan="2" style ="text-align:centre">Adobe XD</td></tr>
+</table>       
 
 
-# Recommender-system-for-tourists
+## Acknowledments to the open source community
 
-I would like to thank Maithrey Talware for his repository where he worked with the toronto, canada for the recommmendation system POC.
-Here is the repo, https://github.com/maitreytalware.
-In our Personalized Iternary Tourist Companion, TRAVERSE, we have come up with personalized choices of a tourist based on what he wants to visit in a place like monuments, museums etc.and the choices are rhe key attributes of the created dataset, based on whose features overall ratings are given. With this the tourist has not to put much efforts.
-We have created a dummy due to lack of data.
+#### Recommender-system-for-tourists
+
+We would like to thank Maithrey Talware for his repository where he worked with a dataset for Toronto, Canada for the recommmendation system POC which can be found at <link>https://github.com/maitreytalware/Recommender-system-for-tourists</link>
+
+In our Personalized Iternary Tourist Companion, TRAVERSE, we have come up with personalized choices of a tourist based on what he/she/they wants to visit in a place like monuments, museums etc and these choices are the key attributes of the created dataset, based on whose features overall ratings are given.
+
+We were forced to create a dummy dataset due to lack of data available.
 
 ## Concept
 ### Data extractrion, imputation and vizualizations
@@ -27,9 +28,9 @@ We have created a dummy due to lack of data.
 We have used knn algorithm for model training
 
 
-# Backend
-We've used several NPM packages like express, dotenve, nodemone etc to start and maintaint our server. 
+# BackEnd
+We've used several NPM packages like express, dotenve, nodemone etc to start and maintain our server. 
 
-# Frontend
-We've used volley for fetching APIS and Google Material Design APIS. 
+# FrontEnd
+We've used volley for fetching API's and Google Material Design API's. 
 
