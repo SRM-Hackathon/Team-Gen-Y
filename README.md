@@ -1,4 +1,15 @@
 <h1>Traverse - Your Personal Travel Companion</h1>
+We have created an android application which servers as a travel companinion for the user. It helps users to plan their trips to place they want to visit. It allows users to create a customized trip iternary according to their personal preferences such as budget, location & a lot more.
+
+Tech Stack used
+Backend:
+ NodeJS 
+ MongoDB
+Frontend:
+ Android Studio - Java
+UI-UX Design
+ Adobe XD
+
 
 # Recommender-system-for-tourists
 
