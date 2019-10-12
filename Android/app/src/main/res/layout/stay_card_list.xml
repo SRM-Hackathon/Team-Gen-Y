@@ -6,7 +6,9 @@
     android:layout_height="wrap_content"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
+
     <LinearLayout
+        android:paddingTop="20dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_width="match_parent"
@@ -115,4 +117,15 @@
                 android:background="#21BC86"/>
         </LinearLayout>
     </LinearLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/editImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_edit_black_24dp" />
 </RelativeLayout>

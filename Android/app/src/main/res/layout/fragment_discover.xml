@@ -159,7 +159,6 @@
 
 
     <LinearLayout
-
         android:id="@+id/linearMain2"
         android:paddingLeft="20dp"
         android:layout_below="@id/linearMain1"
@@ -255,6 +254,47 @@
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearMain2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/gen_back"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Popular cities to visit"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutGenerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+                <include layout="@layout/image_generator_image" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
 
 </RelativeLayout>

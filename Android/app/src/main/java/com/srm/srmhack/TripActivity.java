@@ -1,5 +1,6 @@
 package com.srm.srmhack;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -21,7 +22,7 @@ public class TripActivity extends AppCompatActivity {
 
     ListView listView;
 
-    ArrayList<String> arrayList =new ArrayList<>();
+    ArrayList<String> arrayList = new ArrayList<>();
 
 
     @Override
@@ -52,7 +53,7 @@ public class TripActivity extends AppCompatActivity {
         listView.setAdapter(new CustomAdapter());
     }
 
-    public class CustomAdapter extends BaseAdapter{
+    public class CustomAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
@@ -71,23 +72,38 @@ public class TripActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            if (arrayList.get(position).equals("Day")){
-                convertView = getLayoutInflater().inflate(R.layout.day_list , null);
-            }else if(arrayList.get(position).equals("Loc")) {
-                convertView = getLayoutInflater().inflate(R.layout.location_card_list , null);
+            if (arrayList.get(position).equals("Day")) {
+                convertView = getLayoutInflater().inflate(R.layout.day_list, null);
+            } else if (arrayList.get(position).equals("Loc")) {
+                convertView = getLayoutInflater().inflate(R.layout.location_card_list, null);
                 ImageView imageView = convertView.findViewById(R.id.editImage);
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        AlertDialog.Builder builder = new AlertDialog.Builder(TripActivity.this);
+                        View view = getLayoutInflater().inflate(R.layout.details_dialog, null);
+                        builder.setView(view);
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
                     }
                 });
-            }else if(arrayList.get(position).equals("link")) {
-                convertView = getLayoutInflater().inflate(R.layout.time_list , null);
-            }else if(arrayList.get(position).equals("Stay")) {
-                convertView = getLayoutInflater().inflate(R.layout.stay_card_list , null);
+            } else if (arrayList.get(position).equals("link")) {
+                convertView = getLayoutInflater().inflate(R.layout.time_list, null);
+            } else if (arrayList.get(position).equals("Stay")) {
+                convertView = getLayoutInflater().inflate(R.layout.stay_card_list, null);
                 ImageView imageView = convertView.findViewById(R.id.stayImage);
                 Glide.with(TripActivity.this).load("https://upload.wikimedia.org/wikipedia/commons/b/b3/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006_%28square%29.jpg").into(imageView);
+                ImageView editImage = convertView.findViewById(R.id.editImage);
+                editImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(TripActivity.this);
+                        View view = getLayoutInflater().inflate(R.layout.details_dialog, null);
+                        builder.setView(view);
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
+                    }
+                });
             }
             return convertView;
         }

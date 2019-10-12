@@ -14,7 +14,10 @@
         <shape>
             <solid android:color="@android:color/white" />
             <corners android:radius="10dp" />
-            <padding android:top="15dp" android:right="10dp" android:left="10dp" android:bottom="15dp"/>
+            <padding android:top="20dp"
+                android:right="10dp"
+                android:left="10dp"
+                android:bottom="20dp"/>
         </shape>
     </item>
 
