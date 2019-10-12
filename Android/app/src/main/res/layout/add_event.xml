@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like"
+        android:layout_margin="20dp"
+        android:background="@drawable/back_edit_genrator"
+        android:elevation="10dp"
+        android:hint="Event Name"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/like"
+            android:layout_margin="20dp"
+            android:background="@drawable/back_edit_genrator"
+            android:elevation="10dp"
+            android:hint="Time Start"
+            android:inputType="textPersonName" />
+
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/like"
+            android:layout_margin="20dp"
+            android:background="@drawable/back_edit_genrator"
+            android:elevation="10dp"
+            android:hint="Time End"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/like"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/back_edit_genrator"
+        android:elevation="10dp"
+        android:hint="Location Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/back_edit_genrator"
+        android:elevation="10dp"
+        android:hint="Add Notes"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#21BC86"
+        android:text="Add Item"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/open_sans"/>
+
+</LinearLayout>

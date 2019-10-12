@@ -21,6 +21,8 @@
             android:background="#F9F9F9" />
 
         <EditText
+            android:id="@+id/name"
+            android:cursorVisible="false"
             android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

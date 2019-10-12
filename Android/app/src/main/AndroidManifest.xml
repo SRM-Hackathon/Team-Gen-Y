@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:windowSoftInputMode="adjustPan" android:name=".TripActivity" android:parentActivityName=".HomeActivity"></activity>
+        <activity android:name=".LiveActivity"></activity>
+        <activity
+            android:name=".TripActivity"
+            android:parentActivityName=".HomeActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".PreferenceActivity" />
         <activity android:name=".LoginActivity" />

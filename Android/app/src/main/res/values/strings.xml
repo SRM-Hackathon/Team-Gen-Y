@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SRMHack</string>
+    <string name="port">3000</string>
 </resources>
