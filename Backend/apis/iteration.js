@@ -11,7 +11,7 @@ function degrees_to_radians(degrees)
 
 let calcDistance = ( [lat1, lon1], [lat2, lon2]) => {
   var R = 6371e3; // metres
-  var φ1 = console.log(degrees_to_radians(lat1));
+  var φ1 = (degrees_to_radians(lat1));
   var φ2 = degrees_to_radians(lat2);
   var Δφ = degrees_to_radians(lat2-lat1);
   var Δλ =  degrees_to_radians(lon2-lon1);
@@ -53,6 +53,15 @@ function distance(lat1,lon1,lat2,lon2) {
 
 let tamb = ['12.9249','80.1000']
 
+
+
+function addMinutes(time, minsToAdd) {
+  function D(J){ return (J<10? '0':'') + J;};
+  var piece = time.split(':');
+  var mins = piece[0]*60 + +piece[1] + +minsToAdd;
+
+  return D(mins%(24*60)/60 | 0) + ':' + D(mins%60);  
+}  
 let genItenary = data => {
   let newList = [];
   for (let i in data) {
@@ -73,8 +82,6 @@ let genItenary = data => {
     }
     if(parseFloat(newList[i]['dist'])>15){
       x = 5;
-      // console.log(newList[i]['dist'])
-      // console.log(typeof(newList[i]['dist']))
     }
     else
       x = 7;
@@ -84,35 +91,49 @@ let genItenary = data => {
 
   let finalData = [];
 
-  console.log("aslihsdiufgsdf---------------------");
-  console.log(newList);
-  console.log("Aslsalsdfi -------------------------------------");
-
   let final = sortObjectsArray(newList, "index", {order:"desc"});
-  // let finalData = [];
-  let t1 = '10:30';
+  let t1 = '1030';
+  let budget = 15000;
+  let balance = 15000;
   for(let i in final){
+
     let last_time = t1;
-    let random1 = Math.floor(Math.random() * 25 + 6);
-    let random2 = Math.floor(Math.random() *90 +40);
-     
-    let t=0;
+    function generateRandomInteger(min, max) {
+      return Math.floor(min + Math.random()*(max + 1 - min))
+    }  
+
+    let r1 = generateRandomInteger(20,50);
+    let r2 = generateRandomInteger(30,40);
+    let random1 = generateRandomInteger(20,60);
+    let random2 = generateRandomInteger(30,90);
+
+    addMinutes(t1, r1);
+    addMinutes('18:15:00', '20');
+
+
+    let cost1 = parseInt(generateRandomInteger(100, 500));
+    cost1 = Math.ceil(cost1 / 10) * 10;
+    
+    if(Object.keys(final[i])[6]=="cost"){
+      cost1 = 0;
+      
+      let andart = t1;
+      
+
+    }
     let Obj = {
       name: final[i]['name'],
       order: parseInt(i)+1,
-      start_time: parseFloat((20 + random1))/(60) + parseFloat(t),
-      end_time: parseFloat((20+random1))/parseFloat(60 + random2/60)
+      start_time: 1,
+      end_time: 2,
+      cost: cost1
     };
-
-    t = Obj.end_time;
+    balance = balance - cost1;
+    last_time = Obj.end_time;
     finalData.push(Obj);
   }
-
   return finalData;
 };
-
-
-
 
 function deg2rad(deg) {
   return deg * (Math.PI/180)
@@ -135,15 +156,49 @@ let getData = () => {
 
 
 router.post("/remove-card", (req, res) => {
-  console.log("Remove card api");
+  console.log("req.body");
+
+  let order = req.body.order;
   res.end();
 });
+
+router.post("/added-card", (req,res)=>{
+  console.log(req.body);
+
+
+
+})
+
+
+
+
 
 router.get("/generateTrip", async (req, res) => {
   console.log("post req tripp");
   let data = await getData();
   let sortedData = sortObjectsArray(data, "priority", { order: "desc" });
-  res.send(genItenary(sortedData));
+  let finalData = (genItenary(sortedData));
+  finalData.unshift({
+    name:"flight",
+    from: 'Mumbai Airport',
+    to:'Chennai Airport',
+    start_time: '9:30',
+    end_time: '11:30',
+    order: 0,
+    cost: 2000,
+  })
+
+  mongoClient.connect(dbUrl, (err,db)=>{
+    let dbo = db.db("SRM-Hack");
+    for(let i in finalData){
+      dbo.collection("Current_Iternary").insertOne(finalData[i], (errr,res)=>{
+        console.log("inserted");
+      })
+    }
+  })
+
+  console.log(genItenary(finalData));
+  res.send((genItenary(finalData)));
 });
 
 module.exports = router;
