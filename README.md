@@ -30,6 +30,7 @@ We have used knn algorithm for model training
 
 # BackEnd
 We've used several NPM packages like express, dotenve, nodemone etc to start and maintain our server. 
+Also, we've scrapped data from thrillophilia.com.
 
 # FrontEnd
 We've used volley for fetching API's and Google Material Design API's. 
