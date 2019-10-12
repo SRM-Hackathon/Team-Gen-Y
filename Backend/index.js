@@ -15,6 +15,23 @@ let line = () => {
   console.log("____________________________________________\n");
 };
 
+// app.get("/python", callName);
+// console.log("In python request");
+// function callName(req, res) {
+//   var spawn = require("child_process").spawn;
+
+//   var process = spawn("python", [
+//     "../ML/Recommender-system-for-tourists/model1.py",
+//     req.query.firstname,
+//     req.query.lastname
+//   ]);
+
+//   process.stdout.on("data", function(data) {
+//     console.log(data.toString());
+//     res.send(data.toString());
+//   });
+// }
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
