@@ -37,9 +37,10 @@ app.use(bodyParser.json());
 
 app.use("/", sampleRoute);
 app.use("/user", userRoute);
-app.use("/iteration", iterationRoute);
+app.use("/itenary", iterationRoute);
 
 const port = 3000;
 app.listen(port, () => {
+  line();
   console.log(`Server is running on ${port}`);
 });
